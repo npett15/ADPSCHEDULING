@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar - Shift Schedule</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <!-- Add any additional styles for your grid if needed -->
+    <style>
+        #calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(20, 1fr);
+            gap: 1px;
+            /* Add more styling as needed */
+        }
+
+        .shift {
+            border: 1px solid #ddd;
+            padding: 10px;
+            /* Add more styling as needed */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Shift Calendar</h1>
+        <nav>
+            <ul>
+                <li><a href="employee-dashboard.html">Employee Dashboard</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li class="active"><a href="calendar.html">Calendar</a></li>
+                <li><a href="shifts.html">Shifts</a></li>
+                <!-- Add more navigation links as needed -->
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="calendar">
+            <h2>Shift Calendar</h2>
+            <!-- Your calendar grid goes here -->
+            <div id="calendar-grid" style="display: grid; grid-template-columns: repeat(9, 1fr);">
+                <!-- Top row with days of the week -->
+                <div class="shift empty-cell"></div>
+                <div class="shift day-cell">MON</div>
+                <div class="shift day-cell">TUE</div>
+                <div class="shift day-cell">WED</div>
+                <div class="shift day-cell">THU</div>
+                <div class="shift day-cell">FRI</div>
+                <div class="shift empty-cell"></div>
+                <div class="shift day-cell">SAT</div>
+                <div class="shift day-cell">SUN</div>
+            
+                <!-- Second row with shifts -->
+                <div class="shift role-cell">MNGR</div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">KATY</div>
+                    <div class="shift-time">(8:00)</div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">KATY</div>
+                    <div class="shift-time">(8:00)</div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">KATY</div>
+                    <div class="shift-time">(8:00)</div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">KATY</div>
+                    <div class="shift-time">(8:00)</div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">KATY</div>
+                    <div class="shift-time">(8:00)</div>
+                </div>
+                <div class="shift role-cell">MNGR</div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">ELIJAH</div>
+                    <div class="shift-time">(8:00)</div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">ELIJAH</div>
+                    <div class="shift-time">(8:00)</div>
+                </div>
+
+            
+                <!-- Repeat for a total of 9x20 cells -->
+                <!-- Third row with shifts -->
+                <div class="shift role-cell">PREP</div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">CODY O</div>
+                    <div class="shift-time">(8:00)</div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">CODY O</div>
+                    <div class="shift-time">(8:00)</div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">CODY O</div>
+                    <div class="shift-time">(8:00)</div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">CODY O</div>
+                    <div class="shift-time">(8:00)</div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">CODY O</div>
+                    <div class="shift-time">(8:00)</div>
+                </div>
+                <div class="shift role-cell">PREP</div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">IRIS</div>
+                    <div class="shift-time">(8:00)</div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">IRIS</div>
+                    <div class="shift-time">(8:00)</div>
+                </div>
+                <!-- Fourth row with shifts -->
+                <div class="shift role-cell">PREP</div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">ALEX B</div>
+                    <div class="shift-time">(8:00)</div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">ALEX B</div>
+                    <div class="shift-time">(8:00)</div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">ALEX B</div>
+                    <div class="shift-time">(8:00)</div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">ALEX B</div>
+                    <div class="shift-time">(8:00)</div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">ALEX B</div>
+                    <div class="shift-time">(8:00)</div>
+                </div>
+                <div class="shift role-cell">PREP</div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">SAM</div>
+                    <div class="shift-time">(8:30)</div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">SAM</div>
+                    <div class="shift-time">(8:30)</div>
+                </div>
+                <!-- Fifth row with shifts -->
+                <div class="shift role-cell">PREP/DISH</div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">X</div>
+                    <div class="shift-time"></div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">CARSEN</div>
+                    <div class="shift-time">(8:30)</div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">SAM</div>
+                    <div class="shift-time">(8:30)</div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">CARSEN</div>
+                    <div class="shift-time">(8:30)</div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">SAM</div>
+                    <div class="shift-time">(8:30)</div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">X</div>
+                    <div class="shift-time"></div>
+                </div>                <div class="shift shift-cell">
+                    <div class="shift-name">CARSEN</div>
+                    <div class="shift-time">(10:00)</div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">CARSEN</div>
+                    <div class="shift-time">(10:00)</div>
+                </div>
+                <!-- Sixth row with shifts -->
+                <div class="shift role-cell">ROLL</div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">ABBEY</div>
+                    <div class="shift-time">(8:30)</div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">ABBEY</div>
+                    <div class="shift-time">(8:30)</div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">ABBEY</div>
+                    <div class="shift-time">(8:00)</div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">ALEX K</div>
+                    <div class="shift-time">(8:00)</div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">ABBEY</div>
+                    <div class="shift-time">(8:00)</div>
+                </div>
+                <div class="shift role-cell">ROLL</div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">GRETCH</div>
+                    <div class="shift-time">(8:00)</div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">X</div>
+                    <div class="shift-time"></div>
+                </div>
+                <!-- Seventh row with shifts -->
+                <div class="shift role-cell">OPEN</div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">JACK</div>
+                    <div class="shift-time">(8:00)</div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">X</div>
+                    <div class="shift-time"></div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">NOAH</div>
+                    <div class="shift-time">(10:30)</div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">KLOIE</div>
+                    <div class="shift-time">(10:30)</div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">KLOIE</div>
+                    <div class="shift-time">(10:30)</div>
+                </div>
+                <div class="shift role-cell">MAKE</div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">DECLAN</div>
+                    <div class="shift-time">(10:30)</div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">NOAH</div>
+                    <div class="shift-time">(10:30)</div>
+                </div>
+                <!-- Eighth row with shifts -->
+                <div class="shift role-cell">MAKE</div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">KLOIE</div>
+                    <div class="shift-time">(11:30)</div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">KLOIE</div>
+                    <div class="shift-time">(11:00)</div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">KLOIE</div>
+                    <div class="shift-time">(11:30)</div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">NOAH</div>
+                    <div class="shift-time">(11:30)</div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">JACK</div>
+                    <div class="shift-time">(11:30)</div>
+                </div>
+                <div class="shift role-cell">MAKE 2</div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">NOAH</div>
+                    <div class="shift-time">(11:30)</div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">MORGAN</div>
+                    <div class="shift-time">(12:00)</div>
+                </div>
+                <!-- Ninth row with shifts -->
+                <div class="shift role-cell">MAKE</div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">X</div>
+                    <div class="shift-time"></div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">X</div>
+                    <div class="shift-time"></div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">X</div>
+                    <div class="shift-time"></div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">X</div>
+                    <div class="shift-time"></div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">X</div>
+                    <div class="shift-time"></div>
+                </div>
+                <div class="shift role-cell">MAKE 3</div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">JACK</div>
+                    <div class="shift-time">(12:30)</div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">X</div>
+                    <div class="shift-time"></div>
+                </div>
+                <!-- Tenth row with shifts -->
+                <div class="shift role-cell">MNGR</div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">ELIJAH</div>
+                    <div class="shift-time">(3:00)</div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">ELIJAH</div>
+                    <div class="shift-time">(3:00)</div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">KEITH</div>
+                    <div class="shift-time">(2:00)</div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">KEITH</div>
+                    <div class="shift-time">(2:00)</div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">KEITH</div>
+                    <div class="shift-time">(2:30)</div>
+                </div>
+                <div class="shift role-cell">MNGR</div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">KEITH</div>
+                    <div class="shift-time">(3:00)</div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">KEITH</div>
+                    <div class="shift-time">(3:00)</div>
+                </div>
+                <!-- Eleventh row with shifts -->
+                <div class="shift role-cell">ROLL</div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">GRETCH</div>
+                    <div class="shift-time">(2:30)</div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">ALEK K</div>
+                    <div class="shift-time">(2:30)</div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">GRETCH</div>
+                    <div class="shift-time">(2:30)</div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">BARRY</div>
+                    <div class="shift-time">(2:30)</div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">BARRY</div>
+                    <div class="shift-time">(2:30)</div>
+                </div>
+                <div class="shift role-cell">ROLL</div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">BARRY</div>
+                    <div class="shift-time">(2:30)</div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">GRETCH</div>
+                    <div class="shift-time">(2:30)</div>
+                </div>
+                <!-- Twelfth row with shifts -->
+                <div class="shift role-cell">MAKE</div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">X</div>
+                    <div class="shift-time"></div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">X</div>
+                    <div class="shift-time"></div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">BARRY</div>
+                    <div class="shift-time">(3:00)</div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">MORGAN</div>
+                    <div class="shift-time">(3:00)</div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">BEN</div>
+                    <div class="shift-time">(3:00)</div>
+                </div>
+                <div class="shift role-cell">MAKE</div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">MORGAN</div>
+                    <div class="shift-time">(3:00)</div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">X</div>
+                    <div class="shift-time"></div>
+                </div>
+                <!-- Thirteenth row with shifts -->
+                <div class="shift role-cell">MAKE 2</div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">X</div>
+                    <div class="shift-time"></div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">LUKE</div>
+                    <div class="shift-time">(3:30)</div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">BEN</div>
+                    <div class="shift-time">(3:30)</div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">BEN</div>
+                    <div class="shift-time">(3:30)</div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">KRIS</div>
+                    <div class="shift-time">(3:30)</div>
+                </div>
+                <div class="shift role-cell">MAKE 2</div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">LUKE</div>
+                    <div class="shift-time">(3:30)</div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">KRIS</div>
+                    <div class="shift-time">(3:30)</div>
+                </div>
+                <!-- Fourteenth row with shifts -->
+                <div class="shift role-cell">MAKE 3</div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">ARP</div>
+                    <div class="shift-time">(5:00)</div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">ARP</div>
+                    <div class="shift-time">(5:00)</div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">X</div>
+                    <div class="shift-time"></div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">KRIS</div>
+                    <div class="shift-time">(5:00)</div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">DECLAN</div>
+                    <div class="shift-time">(4:00)</div>
+                </div>
+                <div class="shift role-cell">TILL</div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">BEN</div>
+                    <div class="shift-time">(4:00)</div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">ARP</div>
+                    <div class="shift-time">(4:00)</div>
+                </div>
+                <!-- Fifteenth row with shifts -->
+                <div class="shift role-cell">OVEN</div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">ALEX U-Z</div>
+                    <div class="shift-time">(4:00)</div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">PARKER</div>
+                    <div class="shift-time">(4:00)</div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">PARKER</div>
+                    <div class="shift-time">(4:00)</div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">IRIS</div>
+                    <div class="shift-time">(4:00)</div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">IRIS</div>
+                    <div class="shift-time">(4:00)</div>
+                </div>
+                <div class="shift role-cell">OVEN</div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">ALEX U-Z</div>
+                    <div class="shift-time">(4:00)</div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">DAHLILY</div>
+                    <div class="shift-time">(4:00)</div>
+                </div>
+                <!-- Sixteenth row with shifts -->
+                <div class="shift role-cell">OVEN 2</div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">X</div>
+                    <div class="shift-time"></div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">X</div>
+                    <div class="shift-time"></div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">X</div>
+                    <div class="shift-time"></div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">X</div>
+                    <div class="shift-time"></div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">DAHLILY</div>
+                    <div class="shift-time">(5:00)</div>
+                </div>
+                <div class="shift role-cell">OVEN 2</div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">DAHLILY</div>
+                    <div class="shift-time">(5:00)</div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">ALEX U-Z</div>
+                    <div class="shift-time">(5:00)</div>
+                </div>
+                <!-- Seventeenth row with shifts -->
+                <div class="shift role-cell">MAKE 4</div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">X</div>
+                    <div class="shift-time"></div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">X</div>
+                    <div class="shift-time"></div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">X</div>
+                    <div class="shift-time"></div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">X</div>
+                    <div class="shift-time"></div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">MORGAN</div>
+                    <div class="shift-time">(5:30)</div>
+                </div>
+                <div class="shift role-cell">MAKE 3</div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">ARP</div>
+                    <div class="shift-time">(5:30)</div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">X</div>
+                    <div class="shift-time"></div>
+                </div>
+                <!-- Eighteenth row with shifts -->
+                <div class="shift role-cell">MAKE 5</div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">X</div>
+                    <div class="shift-time"></div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">X</div>
+                    <div class="shift-time"></div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">X</div>
+                    <div class="shift-time"></div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">X</div>
+                    <div class="shift-time"></div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">X</div>
+                    <div class="shift-time"></div>
+                </div>
+                <div class="shift role-cell">MAKE 4</div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">X</div>
+                    <div class="shift-time"></div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">X</div>
+                    <div class="shift-time"></div>
+                </div>
+                <!-- Nineteenth row with shifts -->
+                <div class="shift role-cell">PHONES</div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">DECLAN</div>
+                    <div class="shift-time">(4:30)</div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">RYAN</div>
+                    <div class="shift-time">(4:30)</div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">RYAN</div>
+                    <div class="shift-time">(4:30)</div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">RYAN</div>
+                    <div class="shift-time">(4:00)</div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">RYAN</div>
+                    <div class="shift-time">(4:00)</div>
+                </div>
+                <div class="shift role-cell">PHONE/DISH</div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">RYAN</div>
+                    <div class="shift-time">(4:00)</div>
+                </div>
+                <div class="shift shift-cell">
+                    <div class="shift-name">KIPPER</div>
+                    <div class="shift-time">(4:00)</div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+            
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Shift Schedule</p>
+    </footer>
+</body>
+</html>

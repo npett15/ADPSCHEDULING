@@ -1,0 +1,41 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #3498db;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav {
+    margin-top: 1rem;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin-right: 1rem;
+}
+
+main {
+    padding: 2rem;
+}
+
+footer {
+    background-color: #3498db;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Add more styling as needed */
+ 
